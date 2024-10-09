@@ -33,21 +33,6 @@ services:
       - "9092:9092"
     networks:
       - elastic
-    environment:
-      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
-      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT
-      - KAFKA_LOG_DIRS=/kafka/logs
-      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181  # Zookeeper 설정 추가
-    depends_on:
-      - zookeeper
-
-  zookeeper:
-    image: zookeeper:3.7
-    container_name: zookeeper
-    ports:
-      - "2181:2181"
-    networks:
-      - elastic
 
 networks:
   elastic:
