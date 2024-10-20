@@ -65,7 +65,7 @@ echo 'spark.executor.extraJavaOptions   -Djava.security.manager=allow' >> /opt/s
 
 echo 'export SPARK_HOME=/opt/spark' >> ~/.zshrc
 echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.zshrc
-echo 'export PYSPARK_PYTHON=$(brew --prefix python)/libexec/bin/python' >> ~/.zshrc
+echo 'export PYSPARK_PYTHON=$(brew --prefix python@3.12)/libexec/bin/python' >> ~/.zshrc
 echo "export PYSPARK_DRIVER_PYTHON='jupyter'" >> ~/.zshrc
 echo "export PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port=8889'" >> ~/.zshrc
 echo "export PYSPARK_SUBMIT_ARGS='--jars /opt/spark-3.4.3/jars/elasticsearch-spark-30_2.12-8.15.0.jar,/opt/spark-3.4.3/jars/spark-sql-kafka-0-10_2.12-3.4.3.jar,/opt/spark-3.4.3/jars/kafka-clients-3.3.2.jar,/opt/spark-3.4.3/jars/spark-streaming-kafka-0-10_2.12-3.4.3.jar,/opt/spark-3.4.3/jars/spark-token-provider-kafka-0-10_2.12-3.4.3.jar,/opt/spark-3.4.3/jars/commons-pool2-2.12.0.jar pyspark-shell'" >> ~/.zshrc
